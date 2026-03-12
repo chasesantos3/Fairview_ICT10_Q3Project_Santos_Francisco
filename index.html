@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Intramurals Sign Up</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+background-image:url("https://i.pinimg.com/originals/a7/1a/91/a71a91530fb54c0787102936d6fa57cb.gif");
+background-size:cover;
+background-attachment:fixed;
+}
+
+nav{
+background:#ffffffcc;
+padding:15px;
+}
+
+nav a{
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+color:#ff4fa3;
+}
+
+.card{
+background:white;
+width:320px;
+margin:120px auto;
+padding:30px;
+border-radius:20px;
+border:3px solid #ffd84d;
+box-shadow:0 6px 15px gray;
+}
+
+button{
+padding:10px 20px;
+border-radius:12px;
+border:none;
+background:linear-gradient(to right,#ffd84d,#ff9ecb);
+font-weight:bold;
+cursor:pointer;
+}
+
+input{
+border-radius:10px;
+padding:10px;
+margin:10px;
+width:90%;
+border:1px solid gray;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Sign Up</a>
+<a href="teamchecker.html">Team Checker</a>
+<a href="players.html">Players</a>
+</nav>
+
+<div class="card">
+
+<h2 style="color:#ff4fa3;">Create Account</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<br>
+
+<button onclick="signup()">Sign Up</button>
+
+<p id="output"></p>
+
+</div>
+
+<script>
+
+function signup(){
+
+let user=document.getElementById("username").value
+let pass=document.getElementById("password").value
+let out=document.getElementById("output")
+
+if(user.length<7){
+
+out.innerHTML="Username must be at least 7 characters"
+
+}
+
+else if(pass.length<8){
+
+out.innerHTML="Password must be at least 8 characters"
+
+}
+
+else{
+
+out.innerHTML="Account created successfully!"
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
